@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jeu memoire</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/memory-game.js"></script>
+</head>
+
+<body>
+    <div class="game">
+        <h1>Memory Game</h1>
+        <div id="configuration">
+            <h3>Choose your categorie</h3>
+            <div id="categorie">
+                <figure>
+                    <img src="img/emoji/emoji1.png" alt="emoji" />
+                    <figcaption>emoji</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/hallowen/hallowen1.jpg" alt="hallowen" />
+                    <figcaption>halloween</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/animal/animal1.jpg" alt="animal" />
+                    <figcaption>animal</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/football/football2.jpg" alt="football" />
+                    <figcaption>Football legends</figcaption>
+                </figure>
+
+            </div>
+            <div id="nombreImge">
+                <label for="nbImage">nombre image</label>
+                <select id="nbImage" name="nbImage">
+                    <option value="8">8</option>
+                    <option value="12">10</option>
+                    <option value="16">12</option>
+                </select>
+            </div>
+
+        </div>
+        <div id="startGame">
+            <img id="play" src="icons/button-play.png" alt="play">
+            <div id="conteneur">
+                <!--<h3><span id="nomCategorie"></span> Match</h3>-->
+                <div>
+                    <div id="selectedCategoriesImages">
+                        <!--generer dynamiquement les images-->
+
+                    </div>
+                    <div id="game">
+                        <div id="parametreGauche">
+                            <div>
+                                <div>Temps Ecoule :<div id="temps">0s</div>
+                                </div>
+                                <div>Paire Trouve :<div id="nombrePaireTrouve">0</div>
+                                </div>
+                            </div>
+                            <div>
+                                <button id="boutonPause">Pause</button>
+                                <button id="boutonArreter">Arreter</button>
+                                <button>Restart </button>
+                            </div>
+                        </div>
+                        <div id="parametreMilieu"></div>
+                        <div id="parametreDroite">
+                            <div>
+                                <div><span id="nomCategorie"></span> Match</div>
+                                <div>HIGHSCORE : <span id="highscore">0</span>
+                                </div>
+                            </div>
+                            <div>
+
+                                <img src="icons/volume.png" alt="volume">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        MemoryGame.init()
+    </script>
+</body>
+
+</html>

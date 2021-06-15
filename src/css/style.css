@@ -1,0 +1,225 @@
+/*agencement des elements*/
+
+* {
+    box-sizing: border-box;
+}
+
+.game {
+    /* width: 80%;
+    margin: auto; */
+    display: flex;
+    flex-wrap: wrap;
+    height: 95vh;
+    border: 1px solid red;
+}
+
+button, img {
+    cursor: pointer;
+}
+
+/*titre*/
+
+body>div>h1 {
+    text-align: center;
+    border: 1px solid black;
+    width: 100%;
+}
+
+/*categorie*/
+
+#configuration {
+    width: 30%;
+    border: 1px solid black;
+}
+
+#configuration h3 {
+    border: 1px solid black;
+    text-align: center;
+}
+
+#configuration #categorie {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#configuration figure {
+    width: calc(50% - 12px);
+    height: 30vh;
+    box-sizing: border-box;
+    margin: 3px;
+    border: 1px solid blue;
+}
+
+#configuration figcaption {
+    text-align: center;
+}
+
+#configuration img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+#configuration img:hover {
+    cursor: pointer;
+}
+
+/*choix du nombre*/
+
+#nombreImge {
+    border: 1px solid black;
+    padding: 25px;
+}
+
+#nombreImge select {
+    width: 50%;
+}
+
+#nombreImge label {
+    font-size: 27px;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale();
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+/*start Game*/
+
+#startGame {
+    border: 1px solid black;
+    flex: 1;
+}
+
+#startGame h1 {
+    text-align: center;
+}
+
+#startGame>img {
+    position: absolute;
+    top: calc(90% / 2);
+    left: 60%;
+    animation: zoom 2s linear infinite alternate;
+    z-index: 100;
+}
+
+#startGame>div {
+    opacity: 0.5;
+}
+
+#startGame>div h3 {
+    text-align: center;
+}
+
+#startGame #selectedCategoriesImages {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+#startGame #selectedCategoriesImages img {
+    flex: 1;
+    margin: 2px;
+    /*doit etre genere par le js*/
+    width: calc(100% / 8 - 4px);
+}
+
+/*interface game*/
+
+#startGame #game {
+    display: flex;
+    flex-direction: row;
+}
+
+#startGame #parametreGauche {
+    border: 1px solid black;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#startGame #parametreGauche>div>div {
+    text-align: center;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+#startGame #parametreGauche #temps {
+    text-align: center;
+    margin: 5px;
+}
+
+#startGame #parametreGauche #nombrePaireTrouve {
+    text-align: center;
+    margin: 5px;
+}
+
+/*bouton fonctionnel*/
+
+#startGame button {
+    display: block;
+    width: calc(100% - 10px);
+    margin: 5px;
+    padding: 15px 20px;
+}
+
+#startGame #parametreMilieu {
+    border: 1px solid black;
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 83vh;
+}
+
+#startGame #parametreMilieu img {
+    /*A rendre fluide avec du JS*/
+    margin: 5px;
+    height: calc((83vh - 40px) / 4);
+    object-fit: cover;
+}
+
+#startGame #parametreDroite {
+    border: 1px solid black;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#startGame #parametreDroite>div:first-of-type {
+    text-align: center;
+    margin: 5px;
+}
+
+#startGame #parametreDroite>div>div {
+    margin-bottom: 5px;
+    border: 1px solid black;
+    padding: 7px;
+}
+
+#startGame #parametreDroite img {
+    display: block;
+    width: 40px;
+    margin: auto;
+}
+
+/*playing game*/
+
+#startGame #play {
+    cursor: pointer;
+}
+
+/*classe ajoutee lorsque l'on joue*/
+
+.gaming {
+    width: 80%;
+    margin: auto;
+}
